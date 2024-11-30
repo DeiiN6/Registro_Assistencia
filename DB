@@ -1,0 +1,45 @@
+CREATE DATABASE Registro_Asistencias;
+
+USE Registro_Asistencias;
+
+--TABLA DE ESTUDIANTES
+CREATE TABLE Estudiantes (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    IdEstudiante VARCHAR(20) UNIQUE NOT NULL
+);
+
+--TABLA DE ASISTENCIA
+CREATE TABLE Asistencia (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    IdEstudiante INT NOT NULL,
+    Fecha DATE NOT NULL,
+    Status ENUM('Presente', 'Ausente') NOT NULL,
+    FOREIGN KEY (IdEstudiante) REFERENCES Estudiantes(Id)
+);
+
+--TABLA DE MAESTROS
+CREATE TABLE Maestros (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    IdMaestro VARCHAR(20) UNIQUE NOT NULL,
+    Contraseña VARCHAR(100) NOT NULL
+);
+
+--TABLA DE CLASES
+CREATE TABLE Clases (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    NombreClase VARCHAR(100) NOT NULL,
+    IdMaestro INT NOT NULL,
+    FOREIGN KEY (IdMaestro) REFERENCES Maestros(Id)
+);
+
+--TABLA DE ESTUDIANTES-CLASES
+CREATE TABLE EstudiantesClases (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    IdEstudiante INT NOT NULL,
+    IdClase INT NOT NULL,
+    FOREIGN KEY (IdEstudiante) REFERENCES Estudiantes(Id),
+    FOREIGN KEY (IdClase) REFERENCES Clases(Id)
+);
