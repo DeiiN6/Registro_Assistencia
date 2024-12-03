@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Inicio de Sesión</h1>
-        <form action="validate_login.php" method="POST">
+        <form action="../inicio.php" method="POST">
             <label for="matricula">Matrícula:</label>
             <input type="text" name="matricula" id="matricula" required>
             <label for="password">Contraseña:</label>
