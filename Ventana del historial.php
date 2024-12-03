@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 // Obtener registros de asistencia
 $sql = "
     SELECT 
-        Estudiantes.Nombre AS NombreEstudiante, 
+        Estudiantes.Nombre AS NombreEstudiante,  
         Asistencia.Fecha, 
         Asistencia.Status 
     FROM Asistencia

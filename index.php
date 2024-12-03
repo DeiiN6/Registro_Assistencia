@@ -1,21 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,16 +17,24 @@
     <body id="image-top">
           <nav class="navbar navbar-expand-lg bg-warning fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Registro de Asistencia</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-					<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Autor.php">Historial</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Modificar</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                    <button 
+                         class="navbar-toggler navbar-toggler-right font-weight-bold bg-warning text-white rounded" 
+                         type="button" 
+                         data-bs-toggle="offcanvas" 
+                         data-bs-target="#offcanvasMenu" 
+                         aria-controls="offcanvasMenu" 
+                         aria-expanded="false" 
+                         aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                         <ul class="navbar-nav ml-auto">
+					     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="Autor.php">Historial</a>
+                              </li>
+                              <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Modificar</a>
+                              </li>
+                         </ul>
+                    </div> 
+               </div>
           </nav>
           
           <!-- Barra lateral desplegable -->
