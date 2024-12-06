@@ -1,0 +1,4 @@
+host=localhost
+db=Registro_Asistencias
+user=root
+pass=

@@ -6,7 +6,7 @@ USE Registro_Asistencias;
 CREATE TABLE Estudiantes (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100) NOT NULL,
-    IdEstudiante VARCHAR(20) UNIQUE NOT NULL
+    IdEstudiante VARCHAR(20) UNIQUE NOT NULL,
 );
 
 --TABLA DE ASISTENCIA
@@ -43,3 +43,11 @@ CREATE TABLE EstudiantesClases (
     FOREIGN KEY (IdEstudiante) REFERENCES Estudiantes(Id),
     FOREIGN KEY (IdClase) REFERENCES Clases(Id)
 );
+
+
+USE Registro_Asistencias;
+
+
+ALTER TABLE Estudiantes ADD COLUMN Status ENUM('Presente', 'Ausente');
+
+DESCRIBE Estudiantes;

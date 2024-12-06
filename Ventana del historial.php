@@ -33,6 +33,8 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Registro de Asistencia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         table {
             width: 100%;
@@ -49,7 +51,33 @@ $result = $conn->query($sql);
         }
     </style>
 </head>
-<body>
+<body style="overflow: hidden; padding-right: 0px;">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-warning fixed-top">
+        <div class="container">
+            <!-- Botón para abrir la barra lateral -->
+            <button class="btn btn-outline-dark me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#">Historial de Registro</a>
+        </div>
+    </nav>
+
+    <!-- Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#" class="text-decoration-none">Inicio</a></li>
+                <li class="list-group-item"><a href="ventana del historial.php" class="text-decoration-none">Historial</a></li>
+                <li class="list-group-item"><a href="#" class="text-decoration-none">Modificar</a></li>
+            </ul>
+        </div>
+    </div>
+
     <h1>Historial de Registro de Asistencia</h1>
 
     <table>
